@@ -17,4 +17,15 @@
     {{ end }}
   </div>
 </nav>
+<div id="sponsor">
+  {{ $data := "" }}
+  {{ $url := .Site.Params.Default.Sponsor }}
+  {{ with resources.GetRemote $url }}
+    {{ with .Err }}
+    {{ else }}
+      {{ $data = . | transform.Unmarshal }}
+    {{ end }}
+  {{ end }}
+  {{ if (isset $data "message") }}<p>Sponsor: {{ $data.message | markdownify }}</p>{{ end }}
+</div>
 <div class="alert alert-danger" aria-hidden="true"><p>Your web browser doesn't support modern CSS standards required for displaying this website correctly. <br>Please consider updating your browser or switching to one with <a href="https://caniuse.com/css-has">:has() support</a>.</p></div>

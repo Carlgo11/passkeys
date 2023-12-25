@@ -15,6 +15,7 @@ params:
     theme_color: "#38CCCC"
     icon_path: "https://api.passkeys.2fa.directory/icons/"
     mastodon: "https://infosec.exchange/@2factorauth"
+    sponsor: ""
 
   twitter:
     handle: "2faorg"

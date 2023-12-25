@@ -87,6 +87,16 @@ nav {
   }
 }
 
+#sponsor {
+  background: var(--secondary-background);
+  p {
+    margin: .5em 1em;
+    a {
+      color: unset;
+    }
+  }
+}
+
 @media screen and (max-width: 992px) {
   .back-to-top-link {
     $back-to-top-size: 3rem;
